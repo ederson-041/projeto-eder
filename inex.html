@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <h2>EcoAgro</h2>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#praticas">Práticas</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>Agro Forte, Futuro Sustentável</h1>
+        <p>Encontrando o equilíbrio perfeito entre a alta produtividade no campo e a preservação do meio ambiente para as próximas gerações.</p>
+        <button class="btn" onclick="mostrarMensagem()">Descubra Como</button>
+    </section>
+
+    <section id="praticas" class="praticas">
+        <h2>Pilares do Equilíbrio</h2>
+        <div class="grid-cards">
+            <div class="card">
+                <h3>Rotação de Culturas</h3>
+                <p>Alternância planejada de espécies vegetais na mesma área agrícola para preservar e melhorar o solo.</p>
+                <button class="btn" onclick="acaoBotao('Rotação de Culturas')">Saber Mais</button>
+            </div>
+            <div class="card">
+                <h3>Energia Limpa</h3>
+                <p>Uso de painéis solares e biomassa para alimentar as operações da fazenda com zero emissão de carbono.</p>
+                <button class="btn" onclick="acaoBotao('Energia Limpa')">Saber Mais</button>
+            </div>
+            <div class="card">
+                <h3>Uso Consciente da Água</h3>
+                <p>Sistemas de irrigação inteligente por gotejamento e reaproveitamento de água da chuva.</p>
+                <button class="btn" onclick="acaoBotao('Uso Consciente da Água')">Saber Mais</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculadora" class="praticas" style="background-color: var(--branco);">
+        <h2>Calculadora de Impacto</h2>
+        <p>Descubra quanta água você pode economizar implementando irrigação inteligente.</p>
+        <div style="margin-top: 30px;">
+            <input type="number" id="hectares" placeholder="Tamanho da área (Hectares)">
+            <button id="btn-calcular" class="btn">Calcular Economia</button>
+        </div>
+        <p id="resultado-calculo" style="margin-top: 20px; font-weight: bold; font-size: 1.2rem;"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Projeto Agro Sustentável. Criado para o GitHub Pages.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
