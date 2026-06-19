@@ -1,1 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+:root {
+    --verde-agro: #2E7D32;
+    --verde-folha: #4CAF50;
+    --terra-fertil: #5D4037;
+    --fundo-creme: #F1F8E9;
+    --texto-escuro: #212121;
+    --branco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--fundo-creme);
+    color: var(--texto-escuro);
+    line-height: 1.7;
+    scroll-behavior: smooth; /* Animação suave ao rolar a página */
+}
+
+header {
+    background-color: var(--verde-agro);
+    padding: 1.2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--branco);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--verde-folha);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(rgba(93, 64, 55, 0.7), rgba(46, 125, 50, 0.8)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+    color: var(--branco);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    background-color: var(--verde-folha);
+    color: var(--branco);
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+}
+
+.btn:hover {
+    background-color: var(--verde-agro);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.6);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.praticas {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.praticas h2 {
+    color: var(--terra-fertil);
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.praticas h2::after {
+    content: '';
+    width: 60%;
+    height: 3px;
+    background-color: var(--verde-folha);
+    position: absolute;
+    bottom: -10px;
+    left: 20%;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: var(--branco);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    border-top: 5px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    border-top: 5px solid var(--verde-folha);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: var(--verde-agro);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.card p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+input[type="number"] {
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 2px solid #ddd;
+    width: 300px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+input[type="number"]:focus {
+    border-color: var(--verde-folha);
+}
+
+footer {
+    background-color: var(--terra-fertil);
+    color: var(--branco);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    opacity: 0.8;
+}
